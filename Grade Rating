@@ -3,6 +3,8 @@ using namespace std;
 
 int main ()
 {
+    // Nics Kirschtein // 
+    
     int grades;
     cout << "Enter Your Exact Grade: "<<endl;
     cin >> grades;
@@ -17,4 +19,5 @@ int main ()
         cout << "***You've failed!***";
     }*/
 return 0;
+
 }
