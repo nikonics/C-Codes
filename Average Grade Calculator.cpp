@@ -25,5 +25,4 @@ int main ()
 
     cout << "You Average Grade is: "<< average;
     return 0;
-
 }
