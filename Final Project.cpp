@@ -14,7 +14,7 @@ int main ()
     char snacks1[]="Siomai", snacks2[]="French Fries", snacks3[]="Hotdog Rolls";
     char desert1[]="Macaroni Salad", desert2[]="Mango Float", desert3[]="Sundae";
     char drinks1[]="Coke",drinks2[]="Sprite",drinks3[]="Mountain Dew";
-    ;
+	
     char beginning;
     int choice=0, option, quantity;
 
