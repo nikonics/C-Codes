@@ -19,7 +19,7 @@ int main ()
     char drinks1[]="Coke",drinks2[]="Sprite",drinks3[]="Mountain Dew";
     ;
     char beginning;
-    int choice=0, option, quantity;
+    int choice=6, option, quantity;
 
     bool login = true;
     string user;
@@ -89,7 +89,7 @@ while (login) {
 
                        cout << "\n      What do you like to order?: ";
                        cin >> option;
-                       if (option >=1 && option <=5) {
+                       if (option >=1 && option <=3) {
                        cout << "\n       Please Enter Quantity: ";
                        cin >> quantity;
 
@@ -128,7 +128,17 @@ while (login) {
                                     goto starting;
 			                        }
                        }
+
+                       else {
+                            system ("cls");
+                        cout << "\n\n\n\n";
+                                    cout << "Invalid Choices! Retry Again? [Y / N]: ";
+			                        cin >> beginning;
+			                        if(beginning=='Y' || beginning=='y'){
+                                    goto starting;
+                       }
                 }
+            }
                        else if (choice == 2) {
                        cout << "\n\n";
                        cout << "               .:: FRIED CHICKEN MENU ::. "<<endl;
@@ -136,11 +146,12 @@ while (login) {
                        cout << "      1) "<< chicken1 <<"              (50 PHP) \n";
                        cout << "      2) "<< chicken2 <<"              (50 PHP) \n";
                        cout << "      3) "<< chicken3 <<"              (45 PHP) \n";
-                       cout << "      3) "<< chicken4 <<"              (45 PHP) \n";
+                       cout << "      4) "<< chicken4 <<"              (45 PHP) \n";
 
                        cout << "\n      What do you like to order?: ";
                        cin >> option;
-                       if (option >=1 && option <=5) {
+                       if (option >=1 && option <=4)
+                       {
                        cout << "\n       Please Enter Quantity: ";
                        cin >> quantity;
 
@@ -185,7 +196,16 @@ while (login) {
                                     goto starting;
 			                        }
                        }
+                       else {
+                            system ("cls");
+                        cout << "\n\n\n\n";
+                                    cout << "Invalid Choices! Retry Again? [Y / N]: ";
+			                        cin >> beginning;
+			                        if(beginning=='Y' || beginning=='y'){
+                                    goto starting;
+			                        }
                 }
+            }
                        else if (choice == 3) {
                        cout << "\n\n";
                        cout << "               .:: BURGER MENU ::. "<<endl;
@@ -196,7 +216,7 @@ while (login) {
 
                        cout << "\n      What do you like to order?: ";
                        cin >> option;
-                       if (option >=1 && option <=5) {
+                       if (option >=1 && option <=3) {
                        cout << "\n       Please Enter Quantity: ";
                        cin >> quantity;
 
@@ -234,6 +254,16 @@ while (login) {
                                     goto starting;
 			                        }
                        }
+                       else {
+                            system ("cls");
+                        cout << "\n\n\n\n";
+                                    cout << "Invalid Choices! Retry Again? [Y / N]: ";
+			                        cin >> beginning;
+			                        if(beginning=='Y' || beginning=='y'){
+                                    goto starting;
+			                        }
+                       }
+                }
 
                        else if (choice == 4) {
                        cout << "\n\n";
@@ -245,7 +275,7 @@ while (login) {
 
                        cout << "\n      What do you like to order?: ";
                        cin >> option;
-                       if (option >=1 && option <=5) {
+                       if (option >=1 && option <=3) {
                        cout << "\n       Please Enter Quantity: ";
                        cin >> quantity;
 
@@ -283,9 +313,17 @@ while (login) {
                                     goto starting;
 			                        }
                        }
-
+                       else {
+                            system ("cls");
+                        cout << "\n\n\n\n";
+                                    cout << "Invalid Choices! Retry Again? [Y / N]: ";
+			                        cin >> beginning;
+			                        if(beginning=='Y' || beginning=='y'){
+                                    goto starting;
+			                        }
                     }
-                    if (choice == 5) {
+            }
+                    else if (choice == 5) {
                        cout << "\n\n";
                        cout << "               .:: DESERTS MENU ::. "<<endl;
                        cout << "\n";
@@ -295,7 +333,7 @@ while (login) {
 
                        cout << "\n      What do you like to order?: ";
                        cin >> option;
-                       if (option >=1 && option <=5) {
+                       if (option >=1 && option <=3) {
                        cout << "\n       Please Enter Quantity: ";
                        cin >> quantity;
 
@@ -333,8 +371,17 @@ while (login) {
                                     goto starting;
 			                        }
                        }
+                       else {
+                            system ("cls");
+                        cout << "\n\n\n\n";
+                                    cout << "Invalid Choices! Retry Again? [Y / N]: ";
+			                        cin >> beginning;
+			                        if(beginning=='Y' || beginning=='y'){
+                                    goto starting;
+			                        }
                     }
-                     if (choice == 6) {
+            }
+                     else if (choice == 6) {
                        cout << "\n\n";
                        cout << "               .:: DRINKS MENU ::. "<<endl;
                        cout << "\n";
@@ -344,7 +391,7 @@ while (login) {
 
                        cout << "\n      What do you like to order?: ";
                        cin >> option;
-                       if (option >=1 && option <=5) {
+                       if (option >=1 && option <=3) {
                        cout << "\n       Please Enter Quantity: ";
                        cin >> quantity;
 
@@ -382,12 +429,25 @@ while (login) {
                                     goto starting;
 			                        }
                        }
-                    }
+                    else {
+                            system ("cls");
+                        cout << "\n\n\n\n";
+                                    cout << "Invalid Choices! Retry Again? [Y / N]: ";
+			                        cin >> beginning;
+			                        if(beginning=='Y' || beginning=='y'){
+                                    goto starting;
+                                }
+                     }
+                }
                        else {
+                    system ("cls");
                        cout << "\n\n";
-                       cout << "      Invalid choices!"<<endl;
+                       cout << "Invalid choices! Restart the app? [Y / N]: !"<<endl;
+                       cin>>beginning;
+                       if(beginning=='Y' || beginning=='y')
+
+                       goto starting;
                     }
                   }
-           return 0;
+        return 0;
      }
-}
