@@ -11,12 +11,17 @@ int main ()
 
     // DECLARATION and FUNCTIONS //
 
-    int ordercode;
-    int i=0, quantity, choice;
-    int totalquantity[100], order[100], total=0;
-    string allorder[100], price[100];
+    char meal1[]="Bicol Express ", meal2[]="Adobong Manok", meal3[]="Beef Steak";
+    char chicken1[]="Thigh", chicken2[]="Breast", chicken3[]="Wings", chicken4[]="Drum Stick";
+    char burger1[]="Hambuger", burger2[]="Cheeseburger", burger3[]="Chickenburger";
+    char snacks1[]="Siomai", snacks2[]="French Fries", snacks3[]="Hotdog Rolls";
+    char desert1[]="Macaroni Salad", desert2[]="Mango Float", desert3[]="Sundae";
+    char drinks1[]="Coke",drinks2[]="Sprite",drinks3[]="Mountain Dew";
+    ;
+    char beginning;
+    int choice=0, option, quantity;
 
-    bool tryagain = false;
+    bool login = true;
     string user;
     string pass;
 
@@ -37,22 +42,28 @@ int main ()
 
 
 
-do {
+while (login) {
     cout << "         Username: ";
     cin >> user;
     cout << "         Password: ";
     cin >> pass;
 
-
       if (user == "nics" && pass == "123") {
            cout << "\n";
 	       cout << "     ***Successfully Logged in!***\n\n";
-	       tryagain = true;
-          system("CLS");
-               {
-                   // NESTED INSIDE THE LOGIN FORM //
-                   // MENU xD
+	       login = login;
+	       break;
+      }
+      else{
+           cout << "\n\n";
+           cout << "     [!} Invalid Credentials! Please Try Again";
+           cout << "\n\n";
+          }
 
+      }
+            {
+                   starting:
+                   system("CLS");
                    cout << "\n\n";
                    cout << B;
                    cout << "\n      :[ Welcome To Food Delivery App ]: ";
@@ -62,7 +73,7 @@ do {
                    cout << "     [2] Fried Chickens"<<endl;
                    cout << "     [3] Burgers"<<endl;
                    cout << "     [4] Snacks"<<endl;
-                   cout << "     [5] Deserts "<<endl;
+                   cout << "     [5] Deserts"<<endl;
                    cout << "     [6] Drinks"<<endl;
 
                    cout << "\n    Please Enter your Choice: ";
@@ -72,242 +83,311 @@ do {
                        cout << "\n\n";
                        cout << "               .:: MEALS MENU ::. "<<endl;
                        cout << "\n";
-                       cout << "      [1] 1pc. Bicol Express         (50 PHP) \n";
-                       cout << "      [2] 1pc. Adobong Manok         (55 PHP) \n";
-                       cout << "      [3] 1pc. Beef Steak            (65 PHP) \n";
-                       cout << "      [4] 1pc. Pancit at Bihon       (45 PHP) \n";
-                       cout << "      [5] 1pc. Bulalo                (60 PHP) \n";
+                       cout << "      1) "<< meal1 <<"                 (50 PHP) \n";
+                       cout << "      2) "<< meal2 <<"                 (55 PHP) \n";
+                       cout << "      3) "<< meal3 <<"                 (65 PHP) \n";
 
                        cout << "\n      What do you like to order?: ";
-                       cin >> ordercode;
-
-                       cout << "\n       Please Enter Quantity:";
+                       cin >> option;
+                       if (option >=1 && option <=5) {
+                       cout << "\n       Please Enter Quantity: ";
                        cin >> quantity;
 
-                                switch (ordercode)
-                                {
-                                     case 1:
-                                          allorder [i] = "        1pc. Thighs";
-                                          price [i] = "       50 PHP";
-					                      totalquantity [i] = quantity;
-					                      order [i] = 50*quantity;
-                                          break;
-                                     case 2:
-                                          allorder	  [i] = "        1pc. Breast";
-                                          price		  [i] = "       50 PHP";
-					                      totalquantity [i] = quantity;
-					                      order    [i] = 50*quantity;
-                                          break;
-                                     case 3:
-                                          allorder [i] = "        1pc. Wings";
-                                          price [i] = "       45 PHP";
-					                      totalquantity [i] = quantity;
-					                      order [i] = 45*quantity;
-                                          break;
-                                     default:
-                                        cout << "\n     ~~Invalid Choices~~"<<ordercode;
-                                }
-                       }
-                       if (choice == 2) {
                        cout << "\n\n";
-                       cout << "            .:: FRIED CHICKEN MENU ::. "<<endl;
-                       cout << "\n";
-                       cout << "      [1] 1pc. Thighs                (50 PHP)\n";
-                       cout << "      [2] 1pc. Breast                (50 PHP)\n";
-                       cout << "      [3] 1pc. Wings                 (45 PHP)\n";
-                       cout << "      [4] 1pc. Drum Stick            (45 PHP)\n";
-                       cout << "      [5] 1pc. Thighs with Rice      (60 PHP)\n";
-                       cout << "      [6] 1pc. Breast with Rice      (60 PHP)\n";
-                       cout << "      [7] 1pc. Breast with Rice      (60 PHP)\n";
-                       cout << "      [8] 1pc. Wings with Rice       (60 PHP)\n";
-                       cout << "      [9] 1pc. Drum Stick with Rice  (60 PHP)\n";
-                       cin >> ordercode;
 
-                                switch (ordercode)
+                                system ("cls");
+                                switch (option)
                                 {
                                      case 1:
-                                          allorder [i] = "        1pc. Thighs";
-                                          price [i] = "       50 PHP";
-					                      totalquantity [i] = quantity;
-					                      order [i] = 50*quantity;
-
-					                      cout << "yawa";
+                                         choice = 50*quantity;
+                                         cout<<"\      [!] --- Your Order --- [!]\n\n";
+                                         cout<<" "<< quantity <<" "<<meal1;
+                                         cout<<"       Your Total Bill is: "<< choice;
+                                         cout<<"\n\n       .:: Thank you for ordering! ::.";;
                                           break;
                                      case 2:
-                                          allorder	  [i] = "        1pc. Breast";
-                                          price		  [i] = "       50 PHP";
-					                      totalquantity [i] = quantity;
-					                      order    [i] = 50*quantity;
+                                        choice = 55*quantity;
+                                        cout<<"       [!] --- Your Order --- [!]\n\n";
+                                        cout<<" "<< quantity <<" "<<meal2;
+			                            cout<<"       Your Total Bill is: "<< choice;
+			                            cout<<"\n\n        .:: Thank you for ordering! ::.";
                                           break;
                                      case 3:
-                                          allorder [i] = "        1pc. Wings";
-                                          price [i] = "       45 PHP";
-					                      totalquantity [i] = quantity;
-					                      order [i] = 45*quantity;
+                                         choice = 65*quantity;
+                                         cout<<"       [!] --- Your Order --- [!]\n\n";
+			                             cout<<" "<< quantity<<" "<<meal3;
+			                             cout<<"       Your Total Bill is: "<< choice;
+			                             cout<<"\n\n       .:: Thank you for ordering! ::.";
                                           break;
+
                                 }
+                                   cout << "\n\n\n\n";
+                                    cout << "Would you like to order anything else? Y / N:";
+			                        cin >> beginning;
+			                        if(beginning=='Y' || beginning=='y'){
+                                    goto starting;
+			                        }
                        }
-                       if (choice == 3) {
+                }
+                       else if (choice == 2) {
+                       cout << "\n\n";
+                       cout << "               .:: FRIED CHICKEN MENU ::. "<<endl;
+                       cout << "\n";
+                       cout << "      1) "<< chicken1 <<"              (50 PHP) \n";
+                       cout << "      2) "<< chicken2 <<"              (50 PHP) \n";
+                       cout << "      3) "<< chicken3 <<"              (45 PHP) \n";
+                       cout << "      3) "<< chicken4 <<"              (45 PHP) \n";
+
+                       cout << "\n      What do you like to order?: ";
+                       cin >> option;
+                       if (option >=1 && option <=5) {
+                       cout << "\n       Please Enter Quantity: ";
+                       cin >> quantity;
+
+                       cout << "\n\n";
+
+                                system ("cls");
+                                switch (option)
+                                {
+                                     case 1:
+                                         choice = 50*quantity;
+                                         cout<<"\      [!] --- Your Order --- [!]\n\n";
+                                         cout<<" "<< quantity << " " << chicken1;
+                                         cout<<"       Your Total Bill is: "<< choice;
+                                         cout<<"\n\n       .:: Thank you for ordering! ::.";;
+                                          break;
+                                     case 2:
+                                        choice = 50*quantity;
+                                        cout<<"       [!] --- Your Order --- [!]\n\n";
+                                        cout<<" "<< quantity <<" "<<chicken2;
+			                            cout<<"       Your Total Bill is: "<< choice;
+			                            cout<<"\n\n        .:: Thank you for ordering! ::.";
+                                          break;
+                                     case 3:
+                                         choice = 45*quantity;
+                                         cout<<"       [!] --- Your Order --- [!]\n\n";
+			                             cout<<" "<< quantity<<" "<<chicken3;
+			                             cout<<"       Your Total Bill is: "<< choice;
+			                             cout<<"\n\n       .:: Thank you for ordering! ::.";
+                                     case 4:
+                                         choice = 45*quantity;
+                                         cout<<"       [!] --- Your Order --- [!]\n\n";
+			                             cout<<" "<< quantity<<" "<<chicken4;
+			                             cout<<"       Your Total Bill is: "<< choice;
+			                             cout<<"\n\n       .:: Thank you for ordering! ::.";
+                                          break;
+
+                                }
+                                   cout << "\n\n\n\n";
+                                    cout << "Would you like to order anything else? Y / N:";
+			                        cin >> beginning;
+			                        if(beginning=='Y' || beginning=='y'){
+                                    goto starting;
+			                        }
+                       }
+                }
+                       else if (choice == 3) {
                        cout << "\n\n";
                        cout << "               .:: BURGER MENU ::. "<<endl;
-                       cout << "                ** BUY 1 TAKE 1 ** "<<endl;
                        cout << "\n";
-                       cout << "      [1] Hamburger                  (36 PHP)\n";
-                       cout << "      [2] Cheeseburger               (42 PHP)\n";
-                       cout << "      [3] Fish Burger                (53 PHP)\n";
-                       cout << "      [4] Veggie Burger              (55 PHP)\n";
-                       cout << "      [5] Chicken Burger             (53 PHP)\n";
-                       cout << "      [6] Big Burger                 (76 PHP)\n";
-                       cin >> ordercode;
+                       cout << "      1) "<< burger1 <<"              (39 PHP) \n";
+                       cout << "      2) "<< burger2 <<"              (47 PHP) \n";
+                       cout << "      3) "<< burger3 <<"              (55 PHP) \n";
 
-                        switch (ordercode)
+                       cout << "\n      What do you like to order?: ";
+                       cin >> option;
+                       if (option >=1 && option <=5) {
+                       cout << "\n       Please Enter Quantity: ";
+                       cin >> quantity;
+
+                       cout << "\n\n";
+
+                                system ("cls");
+                                switch (option)
                                 {
                                      case 1:
-                                          allorder [i] = "        1pc. Thighs";
-                                          price [i] = "       50 PHP";
-					                      totalquantity [i] = quantity;
-					                      order [i] = 50*quantity;
+                                         choice = 39*quantity;
+                                         cout<<"\      [!] --- Your Order --- [!]\n\n";
+                                         cout<<" "<< quantity << " " << burger1;
+                                         cout<<"       Your Total Bill is: "<< choice;
+                                         cout<<"\n\n       .:: Thank you for ordering! ::.";;
                                           break;
                                      case 2:
-                                          allorder	  [i] = "        1pc. Breast";
-                                          price		  [i] = "       50 PHP";
-					                      totalquantity [i] = quantity;
-					                      order    [i] = 50*quantity;
+                                        choice = 47*quantity;
+                                        cout<<"       [!] --- Your Order --- [!]\n\n";
+                                        cout<<" "<< quantity <<" "<< burger2;
+			                            cout<<"       Your Total Bill is: "<< choice;
+			                            cout<<"\n\n        .:: Thank you for ordering! ::.";
                                           break;
                                      case 3:
-                                          allorder [i] = "        1pc. Wings";
-                                          price [i] = "       45 PHP";
-					                      totalquantity [i] = quantity;
-					                      order [i] = 45*quantity;
-                                          break;
+                                         choice = 55*quantity;
+                                         cout<<"       [!] --- Your Order --- [!]\n\n";
+			                             cout<<" "<< quantity<<" "<<burger3;
+			                             cout<<"       Your Total Bill is: "<< choice;
+			                             cout<<"\n\n       .:: Thank you for ordering! ::.";
+
                                 }
+                                   cout << "\n\n\n\n";
+                                    cout << "Would you like to order anything else? Y / N:";
+			                        cin >> beginning;
+			                        if(beginning=='Y' || beginning=='y'){
+                                    goto starting;
+			                        }
                        }
-                       if (choice == 4) {
+
+                       else if (choice == 4) {
                        cout << "\n\n";
                        cout << "               .:: SNACKS MENU ::. "<<endl;
                        cout << "\n";
-                       cout << "      [1] 5pc. Beef Siomai           (25 PHP)\n";
-                       cout << "      [2] 5pc. Pork Siomai           (25 PHP)\n";
-                       cout << "      [3] 5pc. Japanese Siomai       (30 PHP)\n";
-                       cout << "      [4] French Fries               (35 PHP)\n";
-                       cout << "      [5] Hotdog Rolls               (20 PHP)\n";
-                       cout << "      [6] Waffles                    (25 PHP)\n";
-                       cin >> ordercode;
+                       cout << "      1) "<< snacks1 <<"              (25 PHP) \n";
+                       cout << "      2) "<< snacks2 <<"              (35 PHP) \n";
+                       cout << "      3) "<< snacks3 <<"              (20 PHP) \n";
 
-                       switch (ordercode)
+                       cout << "\n      What do you like to order?: ";
+                       cin >> option;
+                       if (option >=1 && option <=5) {
+                       cout << "\n       Please Enter Quantity: ";
+                       cin >> quantity;
+
+                       cout << "\n\n";
+
+                                system ("cls");
+                                switch (option)
                                 {
                                      case 1:
-                                          allorder [i] = "        1pc. Thighs";
-                                          price [i] = "       50 PHP";
-					                      totalquantity [i] = quantity;
-					                      order [i] = 50*quantity;
+                                         choice = 25*quantity;
+                                         cout<<"\      [!] --- Your Order --- [!]\n\n";
+                                         cout<<" "<< quantity << " " << snacks1;
+                                         cout<<"       Your Total Bill is: "<< choice;
+                                         cout<<"\n\n       .:: Thank you for ordering! ::.";;
                                           break;
                                      case 2:
-                                          allorder	  [i] = "        1pc. Breast";
-                                          price		  [i] = "       50 PHP";
-					                      totalquantity [i] = quantity;
-					                      order    [i] = 50*quantity;
+                                        choice = 35*quantity;
+                                        cout<<"       [!] --- Your Order --- [!]\n\n";
+                                        cout<<" "<< quantity <<" "<< snacks2;
+			                            cout<<"       Your Total Bill is: "<< choice;
+			                            cout<<"\n\n        .:: Thank you for ordering! ::.";
                                           break;
                                      case 3:
-                                          allorder [i] = "        1pc. Wings";
-                                          price [i] = "       45 PHP";
-					                      totalquantity [i] = quantity;
-					                      order [i] = 45*quantity;
-                                          break;
+                                         choice = 20*quantity;
+                                         cout<<"       [!] --- Your Order --- [!]\n\n";
+			                             cout<<" "<< quantity<<" "<<snacks3;
+			                             cout<<"       Your Total Bill is: "<< choice;
+			                             cout<<"\n\n       .:: Thank you for ordering! ::.";
+
                                 }
+                                   cout << "\n\n\n\n";
+                                    cout << "Would you like to order anything else? Y / N:";
+			                        cin >> beginning;
+			                        if(beginning=='Y' || beginning=='y'){
+                                    goto starting;
+			                        }
                        }
-                       if (choice == 5) {
+
+                    }
+                    if (choice == 5) {
                        cout << "\n\n";
                        cout << "               .:: DESERTS MENU ::. "<<endl;
                        cout << "\n";
-                       cout << "      [1] Macaroni Salad             (39 PHP)\n";
-                       cout << "      [2] Mango Float                (46 PHP)\n";
-                       cout << "      [3] Ice Cream - Chocolate      (20 PHP)\n";
-                       cout << "      [4] Milk Tea                   (55 PHP)\n";
-                       cin >> ordercode;
+                       cout << "      1) "<< desert1 <<"              (55 PHP) \n";
+                       cout << "      2) "<< desert2 <<"              (55 PHP) \n";
+                       cout << "      3) "<< desert3 <<"              (55 PHP) \n";
 
-                       switch (ordercode)
+                       cout << "\n      What do you like to order?: ";
+                       cin >> option;
+                       if (option >=1 && option <=5) {
+                       cout << "\n       Please Enter Quantity: ";
+                       cin >> quantity;
+
+                       cout << "\n\n";
+
+                                system ("cls");
+                                switch (option)
                                 {
                                      case 1:
-                                          allorder [i] = "        1pc. Thighs";
-                                          price [i] = "       50 PHP";
-					                      totalquantity [i] = quantity;
-					                      order [i] = 50*quantity;
+                                         choice = 55*quantity;
+                                         cout<<"\      [!] --- Your Order --- [!]\n\n";
+                                         cout<<" "<< quantity << " " << desert1;
+                                         cout<<"       Your Total Bill is: "<< choice;
+                                         cout<<"\n\n       .:: Thank you for ordering! ::.";;
                                           break;
                                      case 2:
-                                          allorder	  [i] = "        1pc. Breast";
-                                          price		  [i] = "       50 PHP";
-					                      totalquantity [i] = quantity;
-					                      order    [i] = 50*quantity;
+                                        choice = 55*quantity;
+                                        cout<<"       [!] --- Your Order --- [!]\n\n";
+                                        cout<<" "<< quantity <<" "<< desert2;
+			                            cout<<"       Your Total Bill is: "<< choice;
+			                            cout<<"\n\n        .:: Thank you for ordering! ::.";
                                           break;
                                      case 3:
-                                          allorder [i] = "        1pc. Wings";
-                                          price [i] = "       45 PHP";
-					                      totalquantity [i] = quantity;
-					                      order [i] = 45*quantity;
-                                          break;
+                                         choice = 55*quantity;
+                                         cout<<"       [!] --- Your Order --- [!]\n\n";
+			                             cout<<" "<< quantity<<" "<<desert3;
+			                             cout<<"       Your Total Bill is: "<< choice;
+			                             cout<<"\n\n       .:: Thank you for ordering! ::.";
+
                                 }
+                                   cout << "\n\n\n\n";
+                                    cout << "Would you like to order anything else? Y / N:";
+			                        cin >> beginning;
+			                        if(beginning=='Y' || beginning=='y'){
+                                    goto starting;
+			                        }
                        }
-                       if (choice == 6) {
+                    }
+                     if (choice == 6) {
                        cout << "\n\n";
                        cout << "               .:: DRINKS MENU ::. "<<endl;
                        cout << "\n";
-                       cout << "      [1] Coca-Cola                  (25 PHP)\n";
-                       cout << "      [2] Sprite                     (25 PHP)\n";
-                       cout << "      [3] Pepsi                      (25 PHP)\n";
-                       cout << "      [4] Royal                      (25 PHP)\n";
-                       cout << "      [5] Mountain Dew               (25 PHP)\n";
-                       cin >> ordercode;
+                       cout << "      1) "<< drinks1 <<"              (30 PHP) \n";
+                       cout << "      2) "<< drinks2 <<"              (30 PHP) \n";
+                       cout << "      3) "<< drinks3 <<"              (30 PHP) \n";
 
-                             switch (ordercode)
+                       cout << "\n      What do you like to order?: ";
+                       cin >> option;
+                       if (option >=1 && option <=5) {
+                       cout << "\n       Please Enter Quantity: ";
+                       cin >> quantity;
+
+                       cout << "\n\n";
+
+                                system ("cls");
+                                switch (option)
                                 {
                                      case 1:
-                                          allorder [i] = "        1pc. Thighs";
-                                          price [i] = "       50 PHP";
-					                      totalquantity [i] = quantity;
-					                      order [i] = 50*quantity;
+                                         choice = 30*quantity;
+                                         cout<<"\      [!] --- Your Order --- [!]\n\n";
+                                         cout<<" "<< quantity << " " << drinks1;
+                                         cout<<"       Your Total Bill is: "<< choice;
+                                         cout<<"\n\n       .:: Thank you for ordering! ::.";;
                                           break;
                                      case 2:
-                                          allorder	  [i] = "        1pc. Breast";
-                                          price		  [i] = "       50 PHP";
-					                      totalquantity [i] = quantity;
-					                      order    [i] = 50*quantity;
+                                        choice = 30*quantity;
+                                        cout<<"       [!] --- Your Order --- [!]\n\n";
+                                        cout<<" "<< quantity <<" "<< drinks2;
+			                            cout<<"       Your Total Bill is: "<< choice;
+			                            cout<<"\n\n        .:: Thank you for ordering! ::.";
                                           break;
                                      case 3:
-                                          allorder [i] = "        1pc. Wings";
-                                          price [i] = "       45 PHP";
-					                      totalquantity [i] = quantity;
-					                      order [i] = 45*quantity;
-                                          break;
-                                }
+                                         choice = 30*quantity;
+                                         cout<<"       [!] --- Your Order --- [!]\n\n";
+			                             cout<<" "<< quantity<<" "<<drinks3;
+			                             cout<<"       Your Total Bill is: "<< choice;
+			                             cout<<"\n\n       .:: Thank you for ordering! ::.";
 
+                                }
+                                   cout << "\n\n\n\n";
+                                    cout << "Would you like to order anything else? Y / N: ";
+			                        cin >> beginning;
+			                        if(beginning=='Y' || beginning=='y'){
+                                    goto starting;
+			                        }
                        }
+                    }
                        else {
                        cout << "\n\n";
                        cout << "      Invalid choices!"<<endl;
-                       }
-                   }
-
-
-        }
-         else if (pass == "123") {
-            cout << "\n";
-            cout << "     [!] The username is incorrect! Try Again...[!]\n\n";
-            cout << "\n";
-            }
-            else if (user == "nics") {
-            cout << "\n";
-            cout << "     [!] The password is incorrect! Try Again...[!]\n\n";
-            cout << "\n";
-            }
-	       else {
-            cout << "\n";
-            cout << "  [!] Invalid username and password! Please Try Again... [!]\n\n";
-            cout << "\n";
-	     }
- }
- while (!tryagain);
-
-
-return 0;
+                    }
+                  }
+           return 0;
+     }
 }
