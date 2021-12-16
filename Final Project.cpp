@@ -48,7 +48,7 @@ while (login) {
       }
       else{
            cout << "\n\n";
-           cout << "     [!} Invalid Credentials! Please Try Again";
+           cout << "     [!] Invalid Credentials! Please Try Again [!]";
            cout << "\n\n";
           }
 
