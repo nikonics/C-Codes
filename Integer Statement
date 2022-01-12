@@ -1,0 +1,32 @@
+#include<iostream>
+using namespace std;
+
+int main ()
+{
+    int num1, num2, num3, num4, num5;
+
+    cout << "Enter First Number: ";
+    cin >> num1;
+    cout << "\n";
+
+    cout << "Enter Second Number: ";
+    cin >> num2;
+    cout << "\n";
+
+    cout << "Enter Third Number: ";
+    cin >> num3;
+    cout << "\n";
+
+    cout << "Enter Fourth Number: ";
+    cin >> num4;
+    cout << "\n";
+
+    cout << "Enter Fifth Number: ";
+    cin >> num5;
+    cout << "\n";
+
+    cout << "Inputted Numbers: " << num1 << ","<< num2 <<","<< num3 << "," << num4 << ","<< num5;
+    cout << "\n\n";
+
+ return 0;
+}
